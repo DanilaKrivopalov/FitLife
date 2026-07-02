@@ -36,9 +36,9 @@ water_needed = (user_weight_float * WATER_CONST) / RATIO_LITERS
 
 # 4. Вывод красивого результата
 print(
-    f'Привет, {user_name}!\n'
-    f'Ваш возраст: {user_age} лет\n'
-    f'Ваш ИМТ составляет: {round(bmi, 1)} кг/м^2\n'
+    f'Привет, {user_name}!\n',
+    f'Ваш возраст: {user_age} лет\n',
+    f'Ваш ИМТ составляет: {round(bmi, 1)} кг/м^2\n',
     f'Ваша норма воды составляет: {round(water_needed, 2)} л'
 )
 print("Расчёт окончен. Будьте здоровы!")
