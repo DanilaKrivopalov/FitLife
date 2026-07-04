@@ -32,14 +32,14 @@ def main():
 
     #  Преобразуем в тип целое число
     user_age_int = int(user_age)
-    
+
     # Вычисления
     bmi = user_weight_float / (user_height_float**2)
     water_needed = (user_weight_float * WATER_CONST) / RATIO_LITERS
 
     print(
         f"\n Привет, {user_name}!\n",
-        f"Ваш возраст: {user_age} лет\n",
+        f"Ваш возраст: {user_age_int} лет\n",
         f"Ваш ИМТ составляет: {round(bmi, 1)} кг/м^2\n",
         f"Ваша норма воды составляет: {round(water_needed, 2)} л",
     )
