@@ -25,11 +25,14 @@ def main():
 
     except ValueError:
         print(
-            "Чилсо введено невнрно. Используйте цифры, а для разделения"
+            "Чилсо введено неверно. Используйте цифры, а для разделения"
             " числа точку (например 79.8)",
         )
         return
 
+    #  Преобразуем в тип целое число
+    user_age_int = int(user_age)
+    
     # Вычисления
     bmi = user_weight_float / (user_height_float**2)
     water_needed = (user_weight_float * WATER_CONST) / RATIO_LITERS
