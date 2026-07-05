@@ -3,11 +3,11 @@
 
 WATER_CONST = 30  # Константа для подсчёта воды
 RATIO_LITERS = 1000  # Константа для перевода в литры
-# Подсказки для ввода данных
-USER_WEIGHT = (
+# Подсказки для запроса данных от пользователя
+USER_WEIGHT_PROMT = (
     "Введите ваш вес в кг (для отделения целой части " "используйте точку): "
 )
-USER_HEIGHT = (
+USER_HEIGHT_PROMT = (
     "Введите ваш рост в кг (для отделения целой части " "используйте точку): "
 )
 
@@ -18,8 +18,7 @@ def main():
     # Сбор данных
 
     try:
-        user_name = input("Введите ваше имя: ")
-        user_age = input("Введите ваш возраст: ")
+        user_age = int(input("Введите ваш возраст: "))
         user_weight_float = float(input(USER_WEIGHT).replace(",", "."))
         user_height_float = float(input(USER_HEIGHT).replace(",", "."))
 
@@ -30,8 +29,7 @@ def main():
         )
         return
 
-    #  Преобразуем в тип целое число
-    user_age_int = int(user_age)
+    user_name = input("Введите ваше имя: ")
 
     # Вычисления
     bmi = user_weight_float / (user_height_float**2)
@@ -39,7 +37,7 @@ def main():
 
     print(
         f"\n Привет, {user_name}!\n",
-        f"Ваш возраст: {user_age_int} лет\n",
+        f"Ваш возраст: {user_age} лет\n",
         f"Ваш ИМТ составляет: {round(bmi, 1)} кг/м^2\n",
         f"Ваша норма воды составляет: {round(water_needed, 2)} л",
     )
