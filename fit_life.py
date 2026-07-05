@@ -16,11 +16,12 @@ USER_HEIGHT_PROMT = (
 def main():
     """Основная функция прогрраммы: сбор информации и расчет показателей"""
     # Сбор данных
+    user_name = input("Введите ваше имя: ")
 
     try:
         user_age = int(input("Введите ваш возраст: "))
-        user_weight_float = float(input(USER_WEIGHT).replace(",", "."))
-        user_height_float = float(input(USER_HEIGHT).replace(",", "."))
+        user_weight_float = float(input(USER_WEIGHT_PROMT).replace(",", "."))
+        user_height_float = float(input(USER_HEIGHT_PROMT).replace(",", "."))
 
     except ValueError:
         print(
@@ -29,7 +30,6 @@ def main():
         )
         return
 
-    user_name = input("Введите ваше имя: ")
 
     # Вычисления
     bmi = user_weight_float / (user_height_float**2)
