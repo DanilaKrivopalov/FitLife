@@ -30,7 +30,6 @@ def main():
         )
         return
 
-
     # Вычисления
     bmi = user_weight_float / (user_height_float**2)
     water_needed = (user_weight_float * WATER_CONST) / RATIO_LITERS
